@@ -6,30 +6,30 @@ public class Procesos {
     Scanner teclado=new Scanner(System.in);
     SalidaDeInformacion salidaDeInformacion=new SalidaDeInformacion();
 
-    public void restrinccion(Variables variables) {
-            while (variables.getHora() < 0 || variables.getHora() > 24) {
+    public void restriccion(Datos datos) {
+            while (datos.getHora() < 0 || datos.getHora() > 24) {
                 int h;
                 System.out.println("Dato incorrecto");
                 System.out.println("Ingrese de nuevo la hora: ");
                 h = teclado.nextInt();
-                variables.setHora(h);
-                System.out.println(variables.getHora());
+                datos.setHora(h);
+                System.out.println(datos.getHora());
             }
 
-        while (variables.getMinuto() < 0 || variables.getMinuto() > 59) {
+        while (datos.getMinuto() < 0 || datos.getMinuto() > 59) {
             int m;
             System.out.println("Dato incorrecto");
             System.out.println("Ingrese de nuevo el minuto: ");
                 m= teclado.nextInt();
-                variables.setMinuto(m);
+                datos.setMinuto(m);
             }
-        while (variables.getSegundo() < 0 || variables.getSegundo() > 59) {
+        while (datos.getSegundo() < 0 || datos.getSegundo() > 59) {
             int s;
             System.out.println("Dato incorrecto");
             System.out.println("Ingrese de nuevo el segundo: ");
                 s = teclado.nextInt();
-              variables.setSegundo(s);
+              datos.setSegundo(s);
             }
-        salidaDeInformacion.impresion(variables);
+        salidaDeInformacion.impresion(datos);
     }
 }

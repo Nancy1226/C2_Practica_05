@@ -14,7 +14,7 @@ public class LecturaDeDatos {
         minuto = teclado.nextInt();
         System.out.println("Ingrese el segundo: ");
         segundo = teclado.nextInt();
-        Variables variables=new Variables(hora,minuto,segundo);
-        procesos.restrinccion(variables);
+        Datos datos=new Datos(hora,minuto,segundo);
+        procesos.restriccion(datos);
     }
 }
